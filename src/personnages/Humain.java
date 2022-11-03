@@ -3,7 +3,7 @@ package personnages;
 public class Humain {
 	private String nom;
 	private String boissonP;
-	private int argent;
+	protected int argent;
 	
 	public Humain(String nom, String boissonP, int argent) {
 		this.nom = nom;
@@ -16,20 +16,21 @@ public class Humain {
 	public int getArgent() {
 		return argent;
 	}
-	private void parler(String texte) {
+	public void parler(String texte) {
 		System.out.println(texte);
 	}
 	public void direBonjour() {
-		parler("Bonjour ! Je m’appelle" + nom + "et j’aime boire du" + boissonP + ".");
+		parler("Bonjour ! Je mï¿½appelle" + nom + "et jï¿½aime boire du" + boissonP + ".");
 	}
 	public void boire() {
 		parler("Mmmm, un bon verre de" +  boissonP + "! GLOUPS !");
 	}
 	public void acheter(String bien, int prix) {
 		if (argent<prix) {
-			parler("Je n'ai plus que" + argent + "sous en poche. Je ne peux même pas m'offrir un" + bien + " à " + prix + "sous.");
+			parler("Je n'ai plus que" + argent + "sous en poche. Je ne peux mï¿½me pas m'offrir un" + bien + " ï¿½ " + prix + "sous.");
 		} else {
-			parler("J'ai" + argent + "sous en poche. Je vais pouvoir m'offrir" + bien + " à " + prix + "sous.");
+			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir " + bien + " ï¿½ " + prix + "sous.");
+			argent-=prix;
 		}
 	}
 }

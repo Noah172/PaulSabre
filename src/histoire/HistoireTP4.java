@@ -5,14 +5,32 @@ import personnages.*;
 public class HistoireTP4 {
 
 	public static void main(String[] args) {
-		Humain prof = new Humain("Prof","kombucha", 54);
+//		Humain prof = new Humain("Prof","kombucha", 54);
+//		
+//		prof.direBonjour();
+//		prof.acheter("une boisson",12);
+//		prof.boire();
+//		prof.acheter("un jeu", 2);
+//		prof.acheter("kimono", 50);
 		
-		prof.direBonjour();
-		prof.acheter("une boisson",12);
-		prof.boire();
-		prof.acheter("un jeu", 2);
-		prof.acheter("kimono", 40);
-
+//		Commercant marco = new Commercant("Marco","Thé",15);
+		
+//		marco.direBonjour();
+//		marco.seFaireExtorquer();
+//		marco.recevoir(15);
+//		marco.boire();
+		
+		Yakuza yaku=new Yakuza("Yaku Le Noir", "Whisky", 45, "Warsong");
+		
+//		yaku.direBonjour();
+//		yaku.extorquer(marco);
+		
+		Ronin roro= new Ronin("Roro","shochu",54);
+		
+//		roro.direBonjour();
+//		roro.donner(marco);
+		
+		roro.provoquer(yaku);
 	}
 
 }
