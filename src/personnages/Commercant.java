@@ -1,8 +1,8 @@
 package personnages;
 
 public class Commercant extends Humain {
-	public Commercant(String nom, String boissonP, int argent) {
-		super(nom, boissonP, argent);
+	public Commercant(String nom, int argent) {
+		super(nom,"thé", argent);
 		// TODO Auto-generated constructor stub
 	}
 

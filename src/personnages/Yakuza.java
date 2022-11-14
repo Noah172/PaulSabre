@@ -16,15 +16,14 @@ public class Yakuza extends Humain{
 	public void extorquer(Commercant victime) {
 		parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
 		parler(victime.getNom() + ", si tu tiens à la vie donne moi ta bourse !");
-		int argent1 = victime.getArgent();
-		victime.seFaireExtorquer();
+		int argent1 = victime.seFaireExtorquer();
 		parler ("J’ai piqué les " + argent1+ " sous de Marco, ce qui me fait " + (argent+argent1) + " sous dans ma poche. Hi ! Hi !");
-		rep += 1;
+		rep ++;
 	}
 	public int perdre() {
 		int argentAvant=argent;
 		argent=0;
-		rep-=1;
+		rep--;
 		System.out.println("J’ai perdu mon duel et mes "+ argentAvant+" sous, snif... J'ai déshonoré le clan de "+clan+".");
 		return rep;
 	}
